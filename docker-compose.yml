@@ -1,0 +1,27 @@
+version: '3'
+
+services:
+  db:
+    image: postgres
+    shm_size: 5g
+    environment:
+        - POSTGRES_HOST_AUTH_METHOD=trust
+  web:
+    build: .
+    command: python manage.py runserver 0.0.0.0:80
+    #entrypoint: /bin/bash
+    #stdin_open: true
+    #tty: true
+    env_file:
+      - ./dev.env
+    volumes:
+      - ./annotater:/code
+    expose:
+      - 80
+    depends_on:
+      - db
+
+networks:
+  default:
+    external:
+      name: nginx-proxy
