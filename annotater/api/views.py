@@ -4,7 +4,7 @@ from .serializers import AnnotationSerializer
 from .models import Annotation
 
 
-class AnnotationViewSet(viewsets.ReadOnlyModelViewSet):
+class AnnotationViewSet(viewsets.ModelViewSet):
     """
     GBIF Norway's annotation service adds annotations to objects available in the resolver.
     """
