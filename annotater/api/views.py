@@ -12,3 +12,4 @@ class AnnotationViewSet(viewsets.ModelViewSet):
     serializer_class = AnnotationSerializer
     pagination_class = pagination.LimitOffsetPagination
     renderer_classes = (renderers.JSONRenderer, renderers.BrowsableAPIRenderer)
+    filter_fields = ('resolvable_object_id', 'key', 'value', 'source', 'notes', 'created_date')

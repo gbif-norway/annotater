@@ -1,7 +1,6 @@
 from django.db import models
 
 class Annotation(models.Model):
-    id = models.CharField(max_length=200, primary_key=True, serialize=False)
     resolvable_object_id = models.CharField(max_length=200)
     key = models.CharField(max_length=200)
     value = models.CharField(max_length=800)

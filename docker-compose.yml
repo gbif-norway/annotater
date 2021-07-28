@@ -9,6 +9,7 @@ services:
   web:
     build: .
     command: python manage.py runserver 0.0.0.0:80
+    image: annotater:latest
     #entrypoint: /bin/bash
     #stdin_open: true
     #tty: true
