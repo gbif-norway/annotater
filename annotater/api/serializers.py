@@ -6,4 +6,4 @@ class AnnotationSerializer(serializers.ModelSerializer):
 
     class Meta:
         model = Annotation
-        fields = ['resolvable_object_id', 'key', 'value', 'source', 'notes']
+        fields = ['resolvable_object_id', 'key', 'value', 'source', 'notes', 'created_date']
