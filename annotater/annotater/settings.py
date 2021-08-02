@@ -26,7 +26,7 @@ SECRET_KEY = os.environ.get('DJANGO_SECRET_KEY', 'dev-secret-key')
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['annotater.local', 'annotater.gbif.no']
+ALLOWED_HOSTS = ['annotater.local', 'annotate.gbif.no', 'annotater.gbif.no']
 
 
 # Application definition
