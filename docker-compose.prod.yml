@@ -1,0 +1,16 @@
+version: '3'
+
+services:
+  web:
+    restart: always
+    build: .
+    command: gunicorn resolver.wsgi:application --bind 0.0.0.0:81 --worker-tmp-dir /dev/shm --workers=2 --threads=4 --worker-class=gthread
+    expose:
+      - 81
+    env_file:
+      - ./prod.env
+
+networks:
+  default:
+    external:
+      name: nginx-proxy
