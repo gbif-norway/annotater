@@ -16,7 +16,7 @@ services:
     env_file:
       - ./dev.env
     volumes:
-      - ./annotater:/code
+      - ./annotater:/srv
     expose:
       - 80
     depends_on:
